@@ -24,6 +24,7 @@ const TEXT = {
     currentVersion: "Current version: 1.0",
     supportContactIntro: "For support, feedback, or technical issues, please contact:",
     supportPrivacyIntro: "Please visit:",
+    supportEmailLabel: "Email:",
     privacyTitle: "LaneCam Privacy Policy",
     privacyIntro: "We value your privacy. This Privacy Policy explains how LaneCam handles data.",
     privacySection1: "1. Information We May Access",
@@ -37,6 +38,8 @@ const TEXT = {
     privacySection4: "4. Third-Party Services",
     privacySection4Body:
       "LaneCam may use third-party services, including but not limited to:",
+    privacySection4Note:
+      "These third-party services may process limited data according to their own privacy policies.",
     privacySection5: "5. Your Choices",
     privacySection5Body: "You may:",
     privacySection6: "6. Children’s Privacy",
@@ -69,6 +72,7 @@ const TEXT = {
     currentVersion: "現在のバージョン: 1.0",
     supportContactIntro: "サポート、フィードバック、技術的な問題については、以下へお問い合わせください:",
     supportPrivacyIntro: "次をご覧ください:",
+    supportEmailLabel: "メール:",
     privacyTitle: "LaneCam プライバシーポリシー",
     privacyIntro: "LaneCam はお客様のプライバシーを尊重します。本ポリシーはデータの取り扱いを説明します。",
     privacySection1: "1. 取得しうる情報",
@@ -82,6 +86,8 @@ const TEXT = {
     privacySection4: "4. 第三者サービス",
     privacySection4Body:
       "LaneCam は、以下を含む第三者サービスを利用する場合があります:",
+    privacySection4Note:
+      "これらの第三者サービスは、それぞれのプライバシーポリシーに従って限定的なデータを処理する場合があります。",
     privacySection5: "5. お客様の選択",
     privacySection5Body: "お客様は次のことができます:",
     privacySection6: "6. 児童のプライバシー",
@@ -114,6 +120,7 @@ const TEXT = {
     currentVersion: "目前版本：1.0",
     supportContactIntro: "如需支援、回饋或技術問題，請聯絡：",
     supportPrivacyIntro: "請參閱：",
+    supportEmailLabel: "電子郵件：",
     privacyTitle: "LaneCam 隱私權政策",
     privacyIntro: "我們重視您的隱私。本隱私權政策說明 LaneCam 如何處理資料。",
     privacySection1: "1. 我們可能存取的資訊",
@@ -127,6 +134,8 @@ const TEXT = {
     privacySection4: "4. 第三方服務",
     privacySection4Body:
       "LaneCam 可能使用下列第三方服務，包括但不限於：",
+    privacySection4Note:
+      "這些第三方服務可能依其各自的隱私權政策處理有限資料。",
     privacySection5: "5. 您的選擇",
     privacySection5Body: "您可以：",
     privacySection6: "6. 兒童隱私",
@@ -159,6 +168,7 @@ const TEXT = {
     currentVersion: "当前版本：1.0",
     supportContactIntro: "如需支持、反馈或技术问题，请联系：",
     supportPrivacyIntro: "请查看：",
+    supportEmailLabel: "电子邮件：",
     privacyTitle: "LaneCam 隐私政策",
     privacyIntro: "我们重视您的隐私。本隐私政策说明 LaneCam 如何处理数据。",
     privacySection1: "1. 我们可能访问的信息",
@@ -172,6 +182,8 @@ const TEXT = {
     privacySection4: "4. 第三方服务",
     privacySection4Body:
       "LaneCam 可能使用以下第三方服务，包括但不限于：",
+    privacySection4Note:
+      "这些第三方服务可能根据其各自的隐私政策处理有限数据。",
     privacySection5: "5. 您的选择",
     privacySection5Body: "您可以：",
     privacySection6: "6. 儿童隐私",
@@ -461,6 +473,39 @@ function setPreview(locale) {
   document.querySelectorAll("[data-preview-caption]").forEach((el, idx) => {
     el.textContent = captions[locale][idx];
   });
+  const alts = {
+    en: [
+      "LaneCam preview screenshot 1",
+      "LaneCam preview screenshot 2",
+      "LaneCam preview screenshot 3",
+      "LaneCam preview screenshot 4",
+      "LaneCam preview screenshot 5",
+    ],
+    ja: [
+      "LaneCam プレビュー画面 1",
+      "LaneCam プレビュー画面 2",
+      "LaneCam プレビュー画面 3",
+      "LaneCam プレビュー画面 4",
+      "LaneCam プレビュー画面 5",
+    ],
+    "zh-Hant": [
+      "LaneCam 預覽截圖 1",
+      "LaneCam 預覽截圖 2",
+      "LaneCam 預覽截圖 3",
+      "LaneCam 預覽截圖 4",
+      "LaneCam 預覽截圖 5",
+    ],
+    "zh-Hans": [
+      "LaneCam 预览截图 1",
+      "LaneCam 预览截图 2",
+      "LaneCam 预览截图 3",
+      "LaneCam 预览截图 4",
+      "LaneCam 预览截图 5",
+    ],
+  };
+  document.querySelectorAll("[data-preview-alt]").forEach((el, idx) => {
+    el.alt = alts[locale][idx];
+  });
 }
 
 function updateLinks(lang) {
@@ -501,6 +546,7 @@ function applyLang(lang) {
   setText("currentVersion", t.currentVersion);
   setText("supportContactIntro", t.supportContactIntro);
   setText("supportPrivacyIntro", t.supportPrivacyIntro);
+  setText("supportEmailLabel", t.supportEmailLabel);
   setText("privacyTitle", t.privacyTitle);
   setText("privacyIntro", t.privacyIntro);
   setText("privacySection1", t.privacySection1);
@@ -511,6 +557,7 @@ function applyLang(lang) {
   setText("privacySection3Body", t.privacySection3Body);
   setText("privacySection4", t.privacySection4);
   setText("privacySection4Body", t.privacySection4Body);
+  setText("privacySection4Note", t.privacySection4Note);
   setText("privacySection5", t.privacySection5);
   setText("privacySection5Body", t.privacySection5Body);
   setText("privacySection6", t.privacySection6);
