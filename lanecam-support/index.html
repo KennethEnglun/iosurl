@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LaneCam Support</title>
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="support">
     <main class="page">
       <section class="hero">
-        <div class="eyebrow">LaneCam</div>
-        <h1>LaneCam Support</h1>
-        <p class="lead">Welcome to LaneCam.</p>
-        <p class="lead">
+        <div class="topbar">
+          <div class="eyebrow" data-i18n="site">LaneCam</div>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang-option="en">EN</button>
+            <button type="button" class="lang-btn" data-lang-option="ja">JA</button>
+            <button type="button" class="lang-btn" data-lang-option="zh-Hant">繁中</button>
+            <button type="button" class="lang-btn" data-lang-option="zh-Hans">简中</button>
+          </div>
+        </div>
+        <h1 data-i18n="supportTitle">LaneCam Support</h1>
+        <p class="lead" data-i18n="welcomeLead">Welcome to LaneCam.</p>
+        <p class="lead" data-i18n="supportIntro">
           LaneCam is a video-based race review tool designed for lane-based events such as track races and swimming
           competitions. It helps users record races, mark finish-line crossings, review footage frame by frame, and
           export race results.
@@ -20,8 +29,8 @@
       </section>
 
       <section class="section">
-        <h2>Main Features</h2>
-        <ul>
+        <h2 data-i18n="mainFeatures">Main Features</h2>
+        <ul data-i18n-list="support-features">
           <li>Live camera preview</li>
           <li>Virtual finish line setup</li>
           <li>Race recording</li>
@@ -35,37 +44,37 @@
       </section>
 
       <section class="section">
-        <h2>Preview</h2>
-        <p>
+        <h2 data-i18n="previewTitle">Preview</h2>
+        <p data-i18n="previewIntro">
           These screenshots show the main workflow in LaneCam, from setting the finish line to reviewing and exporting race results.
         </p>
         <div class="preview-grid">
           <figure class="preview-card">
             <img src="/asset/pg1.png" alt="LaneCam preview screenshot 1" />
-            <figcaption>Camera preview and finish-line setup</figcaption>
+            <figcaption data-preview-caption>Camera preview and finish-line setup</figcaption>
           </figure>
           <figure class="preview-card">
             <img src="/asset/pg2.png" alt="LaneCam preview screenshot 2" />
-            <figcaption>Recording and lane marking workflow</figcaption>
+            <figcaption data-preview-caption>Recording and lane marking workflow</figcaption>
           </figure>
           <figure class="preview-card">
             <img src="/asset/pg3.png" alt="LaneCam preview screenshot 3" />
-            <figcaption>Frame-by-frame race review</figcaption>
+            <figcaption data-preview-caption>Frame-by-frame race review</figcaption>
           </figure>
           <figure class="preview-card">
             <img src="/asset/pg4.png" alt="LaneCam preview screenshot 4" />
-            <figcaption>Project and record management</figcaption>
+            <figcaption data-preview-caption>Project and record management</figcaption>
           </figure>
           <figure class="preview-card">
             <img src="/asset/pg5.png" alt="LaneCam preview screenshot 5" />
-            <figcaption>PDF export and sharing</figcaption>
+            <figcaption data-preview-caption>PDF export and sharing</figcaption>
           </figure>
         </div>
       </section>
 
       <section class="section">
-        <h2>How to Use</h2>
-        <ol>
+        <h2 data-i18n="howToUse">How to Use</h2>
+        <ol data-i18n-list="support-howto">
           <li>Create or select a project.</li>
           <li>Adjust the finish line position and width in the camera preview.</li>
           <li>Start recording the race.</li>
@@ -76,43 +85,45 @@
       </section>
 
       <section class="section">
-        <h2>FAQ</h2>
-        <h3>1. Does LaneCam require an internet connection?</h3>
-        <p>
-          Core functions such as recording, reviewing, and managing race records can work on-device. Some third-party
-          services, including advertising, may require internet access.
-        </p>
+        <h2 data-i18n="faq">FAQ</h2>
+        <div id="faq-items">
+          <h3>1. Does LaneCam require an internet connection?</h3>
+          <p>
+            Core functions such as recording, reviewing, and managing race records can work on-device. Some third-party
+            services, including advertising, may require internet access.
+          </p>
 
-        <h3>2. Does LaneCam upload my videos?</h3>
-        <p>
-          Race videos and records are primarily stored on your device. Data is only shared when you choose to export or
-          share it.
-        </p>
+          <h3>2. Does LaneCam upload my videos?</h3>
+          <p>
+            Race videos and records are primarily stored on your device. Data is only shared when you choose to export or
+            share it.
+          </p>
 
-        <h3>3. Why does LaneCam need camera access?</h3>
-        <p>LaneCam requires camera access to record races and assist with finish-line review.</p>
+          <h3>3. Why does LaneCam need camera access?</h3>
+          <p>LaneCam requires camera access to record races and assist with finish-line review.</p>
 
-        <h3>4. Why are ads shown in the app?</h3>
-        <p>LaneCam may use third-party advertising services to support app operation.</p>
+          <h3>4. Why are ads shown in the app?</h3>
+          <p>LaneCam may use third-party advertising services to support app operation.</p>
+        </div>
       </section>
 
       <section class="section">
-        <h2>Contact</h2>
+        <h2 data-i18n="contact">Contact</h2>
         <div class="contact-card">
-          <div>For support, feedback, or technical issues, please contact:</div>
+          <div data-i18n="supportContactIntro">For support, feedback, or technical issues, please contact:</div>
           <div>Email: <a href="mailto:pang@pangsir.com">pang@pangsir.com</a></div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Privacy Policy</h2>
+        <h2 data-i18n="privacyPolicy">Privacy Policy</h2>
         <p>
-          Please visit:
-          <a href="/privacy/">https://www.pangsir.com/privacy</a>
+          <span data-i18n="supportPrivacyIntro">Please visit:</span>
+          <a href="/privacy/" data-lang-link data-base-href="/privacy/">https://www.pangsir.com/privacy</a>
         </p>
       </section>
 
-      <p class="footer">Current version: 1.0</p>
+      <p class="footer" data-i18n="currentVersion">Current version: 1.0</p>
     </main>
   </body>
 </html>

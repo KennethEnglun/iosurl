@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LaneCam</title>
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="home">
     <main class="page">
       <section class="hero hero-home">
-        <div class="eyebrow">LaneCam</div>
-        <h1>Welcome</h1>
-        <p class="lead">
+        <div class="topbar">
+          <div class="eyebrow" data-i18n="site">LaneCam</div>
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang-option="en">EN</button>
+            <button type="button" class="lang-btn" data-lang-option="ja">JA</button>
+            <button type="button" class="lang-btn" data-lang-option="zh-Hant">繁中</button>
+            <button type="button" class="lang-btn" data-lang-option="zh-Hans">简中</button>
+          </div>
+        </div>
+        <h1 data-i18n="welcome">Welcome</h1>
+        <p class="lead" data-i18n="welcomeLead">
           Find support information and privacy details for LaneCam.
         </p>
       </section>
 
       <section class="section">
-        <h2>Quick Links</h2>
+        <h2 data-i18n="quickLinks">Quick Links</h2>
         <div class="link-grid">
-          <a class="link-card" href="/lanecam-support/">
-            <span class="link-title">LaneCam Support</span>
-            <span class="link-desc">Usage guide, FAQ, and contact details</span>
+          <a class="link-card" href="/lanecam-support/" data-lang-link data-base-href="/lanecam-support/">
+            <span class="link-title" data-i18n="supportLinkTitle">LaneCam Support</span>
+            <span class="link-desc" data-i18n="supportLinkDesc">Usage guide, FAQ, and contact details</span>
           </a>
-          <a class="link-card" href="/privacy/">
-            <span class="link-title">Privacy Policy</span>
-            <span class="link-desc">How LaneCam handles data and permissions</span>
+          <a class="link-card" href="/privacy/" data-lang-link data-base-href="/privacy/">
+            <span class="link-title" data-i18n="privacyLinkTitle">Privacy Policy</span>
+            <span class="link-desc" data-i18n="privacyLinkDesc">How LaneCam handles data and permissions</span>
           </a>
         </div>
       </section>
